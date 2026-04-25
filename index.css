@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@200;300;400;500&family=Outfit:wght@200;300;400&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-quote: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-brand-bg: #080808;
+  --color-brand-sidebar: #0b0b0b;
+  --color-brand-paper: #111111;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+  --color-brand-muted: #666666;
+  --color-brand-accent: #E5E5E1; /* Muted stone white */
+  --color-brand-accent-glow: rgba(229, 229, 225, 0.15);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-[#A1A1AA] font-sans selection:bg-brand-accent selection:text-black antialiased tracking-tight;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-[#F4F4F5] font-light tracking-widest;
+  }
+}
+
+.timeline-item {
+  @apply p-6 border-l border-transparent hover:bg-white/[0.01] cursor-pointer transition-all duration-500 border-b border-white/[0.02];
+}
+
+.timeline-item-active {
+  @apply bg-white/[0.03] border-brand-accent/30;
+}
+
+.fragment-card {
+  @apply bg-white/[0.02] border border-white/[0.05] rounded-sm p-8 hover:border-white/10 transition-all duration-700;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/5 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/10;
+}

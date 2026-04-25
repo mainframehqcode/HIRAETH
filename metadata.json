@@ -1,0 +1,13 @@
+{
+  "name": "HIRAETH",
+  "description": "A refined, multi-modal journal for capturing life's moments through voice, video, photos, and text. Features a secure entry system and a mature, subtle aesthetic.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "multimodal_journaling",
+    "secure_access",
+    "media_capture"
+  ]
+}
